@@ -113,6 +113,7 @@ l. ...\showbox0
 .\penalty -300
 .\glue 15.0694 plus 4.30554 minus 0.86108
 .\glue(\parskip) 0.0
+.\glue(\parskip) 0.0
 .\hbox(9.99998+0.0)x345.0, glue set 237.4268fil
 ..\hbox(9.27998+0.0)x24.29997
 ...\glue 0.0
@@ -134,9 +135,10 @@ l. ...\showbox0
 ..\penalty 10000
 ..\glue(\parfillskip) 0.0 plus 1.0fil
 ..\glue(\rightskip) 0.0
-.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline \ETC.}
+.\write1{\@writefile{toc}{\protect \contentsline {section}{\protect \numberline {1}german}{\thepage }{}\protected@file@percent }}
 .\penalty 10000
 .\glue 9.90276 plus 0.86108
+.\glue(\parskip) 0.0
 .\glue(\parskip) 0.0
 .\glue(\baselineskip) 5.05556
 .\hbox(6.94444+1.94444)x345.0, glue set 261.55542fil

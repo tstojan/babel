@@ -2,18 +2,18 @@
 % The use of babel broke AMSLaTeX's \tag command
 % specifically test with active character in label
 %
-\input{test2e}
+\input{test2e}\input{test2eb}
 \documentclass{report}
 \START
 \AUTHOR{Igor A. Kotelnikov <[e-mail hidden]>}
 \FORMAT{LaTeX2e<1996/06/01>}
 \CLASS{report}
 \PACKAGE{amsmath}
-\PACKAGE[francais]{babel}
+\PACKAGE[french]{babel}
 
 \OMIT
 \usepackage{amsmath}
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 
 \begin{document}
 \TIMO

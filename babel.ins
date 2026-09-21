@@ -3,7 +3,7 @@
 %% driver files from the doc files in this package when run through
 %% LaTeX or TeX.
 %%
-%% Copyright 2012-2020 Javier Bezos and Johannes L. Braams.
+%% Copyright 2012-2026 Javier Bezos and Johannes L. Braams.
 %% Copyright 1989-2008 Johannes L. Braams and any individual authors
 %% listed elsewhere in this file.  All rights reserved.
 %% 
@@ -26,7 +26,7 @@
 %% and covered by LPPL is defined by the unpacking scripts (with
 %% extension .ins) which are part of the distribution.
 %%
-\def\filedate{2020/05/21}
+\def\filedate{2026/09/20}
 \def\batchfile{babel.ins}
 \input docstrip.tex
 
@@ -48,7 +48,7 @@
 % Modify docstrip. A pseudo-guard is defined to set variables:
 % <<name=value>>. These variables are used with <@name@> Two further
 % pseudo-guards define "block" variables: <<*name>> and <</name>>
-% delimite the lines to be retrived with <@name@>. Note the verbatim
+% delimite the lines to be retrieved with <@name@>. Note the verbatim
 % guard is overridden, but it's not used here.  This is done in two
 % passes: 1) with saving true, there is a dummy pass, generating
 % nothing, but blocks are read and saved; 2) with saving false, blocks
@@ -74,7 +74,7 @@
   \else
     \activefiles
   \fi}
-  
+
 \newif\ifcollect
 \newif\ifsaving
 
@@ -127,7 +127,7 @@
 \savingtrue
 \generate{\usepreamble\empty
           \usepostamble\empty
-          \file{babel.log}{\from{babel.dtx}{dummy}}}
+          \file{dummy.log}{\from{babel.dtx}{dummy}}}
 \savingfalse
 
 \generate{\file{babel.sty}{\from{babel.dtx}{package}}
@@ -135,6 +135,16 @@
           \file{switch.def}{\from{babel.dtx}{kernel}}
           \file{hyphen.cfg}{\from{babel.dtx}{patterns}}
           \file{nil.ldf}{\from{babel.dtx}{nil}}
+          \file{errbabel.def}{\from{babel.dtx}{errors}}
+          \file{babel-ca-buddhist.tex}{\from{babel.dtx}{ca-buddhist}}
+          \file{babel-ca-chinese.tex}{\from{babel.dtx}{ca-chinese}}
+          \file{babel-ca-coptic.tex}{\from{babel.dtx}{ca-coptic}}
+          \file{babel-ca-ethiopic.tex}{\from{babel.dtx}{ca-ethiopic}}
+          \file{babel-ca-hebrew.tex}{\from{babel.dtx}{ca-hebrew}}
+          \file{babel-ca-indian.tex}{\from{babel.dtx}{ca-indian}}
+          \file{babel-ca-islamic.tex}{\from{babel.dtx}{ca-islamic}}
+          \file{babel-ca-julian.tex}{\from{babel.dtx}{ca-julian}}
+          \file{babel-ca-persian.tex}{\from{babel.dtx}{ca-persian}}
           \file{xebabel.def}{\from{babel.dtx}{xetex}}
           \file{luababel.def}{\from{babel.dtx}{luatex}}
           \file{txtbabel.def}{\from{babel.dtx}{texxet}}
@@ -146,7 +156,29 @@
           \file{blplain.tex}{\from{babel.dtx}{blplain}}
          }
 
-% compatibility files
+\generate{\file{cyrl2uni.def}{\from{licr2uni.dtx}{cyrl}}
+         }
+         
+% MakeIndex style files
+
+\usedir{makeindex/babel}
+
+\generate{\file{bbind.ist}{\from{bbidxglo.dtx}{idx}}
+          \file{bbglo.ist}{\from{bbidxglo.dtx}{glo}}}
+
+% lua code
+
+\def\MetaPrefix{--}
+\usepreamble\luapreamble
+\nopostamble
+\generate{\file{babel-transforms.lua}{\from{babel.dtx}{transforms}}}
+\generate{\file{babel-data-bidi.lua}{\from{babel.dtx}{bididata}}}
+\generate{\file{babel-data-cjk.lua}{\from{babel.dtx}{cjkdata}}}
+\generate{\file{babel-bidi-basic-r.lua}{\from{babel.dtx}{basic-r}}}
+\generate{\file{babel-bidi-basic.lua}{\from{babel.dtx}{basic}}}
+
+% Compatibility files
+
 \def\compatfile#1{\file{#1.sty}{\from{bbcompat.dtx}{styfile,#1}}}
 
 \generate{%
@@ -209,22 +241,6 @@
          \compatfile{bahasam}
          }
 
-% MakeIndex style files
-
-\usedir{makeindex/babel}
-
-\generate{\file{bbind.ist}{\from{bbidxglo.dtx}{idx}}
-          \file{bbglo.ist}{\from{bbidxglo.dtx}{glo}}}
-
-% lua code
-
-\def\MetaPrefix{--}
-\usepreamble\luapreamble
-\nopostamble
-\generate{\file{babel-data-bidi.lua}{\from{babel.dtx}{bididata}}}
-\generate{\file{babel-data-cjk.lua}{\from{babel.dtx}{cjkdata}}}
-\generate{\file{babel-bidi-basic-r.lua}{\from{babel.dtx}{basic-r}}}
-\generate{\file{babel-bidi-basic.lua}{\from{babel.dtx}{basic}}}
 
 \Msg{***********************************************************}
 \Msg{*}
@@ -245,5 +261,3 @@
 \Msg{* Happy TeXing}
 \Msg{*}
 \Msg{***********************************************************}
-
-

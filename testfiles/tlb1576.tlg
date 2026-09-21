@@ -4,7 +4,7 @@ Author: Peter K. Schilling <[e-mail hidden]>
 Format: LaTeX2e<1994/06/01>
 Main Class: article
 Package: babel
-    Options: german,francais
+    Options: german,french
 > \box...=
 \hbox(6.94444+1.94444)x74.47237
 .\OT1/cmr/m/n/10 l
@@ -28,6 +28,8 @@ Package: babel
 .\OT1/cmr/m/n/10 h
 ! OK.
 l. ...\setbox0=\hbox{\tryit}\showbox0
+Package babel Info: 'german' activates 'german' shorthands.
+(babel)             Reported on input line ....
 > \box...=
 \hbox(6.83331+1.94444)x83.50018
 .\OT1/cmr/m/n/10 L

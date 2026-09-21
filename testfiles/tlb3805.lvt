@@ -9,7 +9,7 @@ Description of bug:
 Stack overflow in the provided example .tex file on the second  latex
 or pdflatex run. 
 \fi
-\input{test2e}
+\input{test2e}\input{test2eb}
 \documentclass{article}
 \START
 \FORMAT{LaTeX2e <2001/06/01>}
@@ -29,7 +29,7 @@ or pdflatex run.
 \usepackage{varioref}
 \labelformat{section}{section~#1}
 \usepackage{hyperref}
-\listfiles
+
 \begin{document}
 \TIMO
 

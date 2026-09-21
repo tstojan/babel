@@ -11,11 +11,12 @@ Completed box being shipped out [1]
 .\vbox(618.0+0.0)x360.0, shifted 54.8775
 ..\vbox(8.0+0.0)x360.0, glue set 8.0fil
 ...\glue 0.0 plus 1.0fil
-...\hbox(0.0+0.0)x360.0, glue set 360.0fil
-....\glue 0.0 plus 1.0fil minus 1.0fil
+...\hbox(0.0+0.0)x360.0
+....\hbox(0.0+0.0)x360.0, glue set 360.0fil
+.....\glue 0.0 plus 1.0fil minus 1.0fil
 ..\glue 14.0
 ..\glue(\lineskip) 0.0
-..\vbox(584.0+0.0)x360.0, glue set 457.59003fil
+..\vbox(584.0+0.0)x360.0, glue set 455.64558fil
 ...\write1{\babel@aux{english}{}}
 ...\mark{{\@nx \shortauthors }{\@nx \shorttitle }}
 ...\glue(\topskip) 35.13889
@@ -65,6 +66,7 @@ Completed box being shipped out [1]
 ...\glue -2.09999 plus -2.09999
 ...\glue 20.0
 ...\glue(\parskip) 0.0
+...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 4.53334
 ...\hbox(5.46666+0.0)x360.0, glue set 162.42197fil
 ....\glue(\leftskip) 0.0 plus 1.0fil
@@ -88,7 +90,10 @@ Completed box being shipped out [1]
 ...\penalty -51
 ...\glue 2.09999 plus 2.09999
 ...\glue 22.0
-...\mark{{\def \\{ \ignorespaces }\MakeUppercase {Albert}}{{\protect \@upprep \ETC.}
+...\marks1{\__mark_value:nn {1}{\protect \foreignlanguage {english}{\protect \bbl@restore@actives \def \\{ \ignorespaces }\MakeUppercase    []{Albert}}}}
+...\marks2{\__mark_value:nn {2}{\protect \foreignlanguage {english}{\protect \bbl@restore@actives {\protect \@upprep ZUR ELEKTRODYNAMIK\protect \dots  }}}}
+...\marks3{\__mark_value:nn {3}{\protect \foreignlanguage {english}{\protect \bbl@restore@actives {\protect \@upprep ZUR ELEKTRODYNAMIK\protect \dots  }}}}
+...\glue(\parskip) 0.0
 ...\glue(\parskip) 0.0
 ...\glue(\baselineskip) 5.05556
 ...\hbox(6.94444+1.94444)x360.0, glue set 131.13853fil
@@ -145,7 +150,6 @@ Completed box being shipped out [1]
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
-...\glue -1.94444
 ...\glue 0.0 plus 1.0fil
 ...\glue 7.0 plus 11.0
 ...\kern -0.4
@@ -174,10 +178,11 @@ Completed box being shipped out [1]
 ....\glue(\rightskip) 0.0
 ...\glue -3.00003
 ..\glue(\baselineskip) 7.48889
-..\hbox(4.51111+0.0)x360.0, glue set 178.00694fil
-...\glue 0.0 plus 1.0fil
-...\OT1/cmr/m/n/7 1
-...\glue 0.0 plus 1.0fil
+..\hbox(4.51111+0.0)x360.0
+...\hbox(4.51111+0.0)x360.0, glue set 178.00694fil
+....\glue 0.0 plus 1.0fil
+....\OT1/cmr/m/n/7 1
+....\glue 0.0 plus 1.0fil
 [2
 ] [3
 ] (tlb3756.aux)

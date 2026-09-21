@@ -6,8 +6,7 @@
 bundle = ""
 module = "babel"
 
--- Minor modifications to file types
-installfiles = {"*.def", "*.ldf", "*.sty", "*.tex"}
+installfiles = {"*.def", "*.ldf", "*.sty", "*.tex", "*.cfg" , "*.lua"}
 sourcefiles  = {"*.dtx", "*.ins"}
 typesetfiles = {"babel.dtx"}
 
@@ -31,6 +30,9 @@ checksuppfiles = {"test2e.tex"}
 
 -- Build TDS-style zips
 packtdszip = true
+
+-- Lua test files
+-- checkconfigs = {"build","config-lua"}
 
 -- Find and run the build system
 kpse.set_program_name ("kpsewhich")

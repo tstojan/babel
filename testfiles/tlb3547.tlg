@@ -34,7 +34,7 @@ Package: showkeys
 .......\rule(*+*)x0.4
 ......\rule(0.4+0.0)x*
 ..\glue 0.0 plus 1.0fil minus 1.0fil
-.\write1{\newlabel{test:test}{{}{\thepage }}}
+.\write1{\newlabel{test:test}{{}{\thepage }{}{}{}}}
 ! OK.
 l. ...\testit{\label{test:test}} 
                                            % printed ``test\protect :test''"

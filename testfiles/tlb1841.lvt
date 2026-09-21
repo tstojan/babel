@@ -2,8 +2,8 @@
 % The language switching commands should *not* produce any 
 % spurious white space.
 %
-\input{test2e}
-\documentclass[francais,english,a4paper,12pt]{book}
+\input{test2e}\input{test2eb}
+\documentclass[french,english,a4paper,12pt]{book}
 \START
 \AUTHOR{Johannes Braams}
 \FORMAT{LaTeX2e<1995/06/01>}

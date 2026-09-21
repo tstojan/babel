@@ -2,4 +2,7 @@ build/*
 *.zip
 *.pdf
 !*/testfiles/*.pdf
-/xbuild.lua
+/*.py
+/ls-R
+/testfiles/*.diff
+/*.cnf

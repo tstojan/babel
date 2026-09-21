@@ -7,18 +7,18 @@
 %%BoundingBox: 0 0 100 100
 \end{filecontents}
 \errorcontextlines=20
-\input{test2e}
+\input{test2e}\input{test2eb}
 \documentclass{report}
 \START
 \AUTHOR{[e-mail hidden] (Benjamin BAYART)}
 \FORMAT{LaTeX2e<1995/12/01>}
 \CLASS{report}
-\PACKAGE[francais]{babel}
+\PACKAGE[french]{babel}
 \PACKAGE{array}
 \PACKAGE{graphicx}
 
 \OMIT
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage{array}
 \usepackage{graphicx}
 

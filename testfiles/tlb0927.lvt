@@ -1,15 +1,15 @@
 % Test file for LaTeX2e/Babel bug report #0927
 % The input \^\i should give the same result as \^i
-\input{test2e}
+\input{test2e}\input{test2eb}
 \documentclass{article}
 \START
 \AUTHOR{Laurent Decreusefond <[e-mail hidden]>} 
 \FORMAT{LaTeX2e<1994/06/01>}
 \CLASS{article}
-\PACKAGE[francais]{babel}
+\PACKAGE[french]{babel}
 
 \OMIT
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \begin{document}
 \TIMO
 \showboxbreadth=40

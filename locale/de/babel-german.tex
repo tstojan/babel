@@ -8,5 +8,10 @@
   \stop
 \fi
 \BabelBeforeIni{de}{%
+  \BabelDefinitionFile{0}{german}{%
+    \csname clist\string_if\string_in\string:NnT\endcsname
+      \BabelLocalesTentative{ngerman}% Still tentative
+      {\def\BabelIniTag{de-1901}}}%
 }
 \endinput
+

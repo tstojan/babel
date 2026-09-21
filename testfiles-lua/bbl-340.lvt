@@ -1,0 +1,68 @@
+\input{test2e}
+\documentclass{article}
+
+\makeatletter
+  \def\TestBox#1{%
+    \def\Test@Temp{#1}%
+    \texttt{\expandafter\strip@prefix\meaning\Test@Temp} = {#1}%
+    \setbox0\hbox{#1}%
+    \message{^^J\expandafter\strip@prefix\meaning\Test@Temp
+      \space\string= \the\wd0, \the\ht0, \the\dp0}}
+  \def\TestPos#1{%
+    \gdef\TestAuxMessage##1{\message{^^JTIMO^^J##1^^JOMIT^^J}}%
+    \savepos
+    \protected@write\@mainaux{}%
+      {\protect\TestAuxMessage{#1 \string= \noexpand\the\lastxpos,
+      \noexpand\the\lastypos}}}
+  \def\TestAuxMessage#1{}
+\makeatother
+
+\START
+\OMIT
+
+\usepackage[english, hyphenmap=other*]{babel}
+
+\day=15
+\month=12
+\year2016
+
+\babelprovide[import]{lao}
+\babelprovide[import]{ancientgreek}
+\babelprovide[import]{monotonicgreek}
+\babelprovide[import]{medievallatin}
+
+\babelfont[ancientgreek]{rm}{FreeSerif}
+
+\begin{document}
+
+\hfuzz=\maxdimen
+
+\TIMO
+
+\selectlanguage{lao}
+
+\selectlanguage{ancientgreek}
+
+\TestBox{\today}
+
+\TestBox{\greeknumeral{1} \greeknumeral{56} \greeknumeral{123987}}
+
+\TestBox{\MakeUppercase{\greeknumeral{1} \greeknumeral{56} \greeknumeral{123987}}}
+
+\selectlanguage{medievallatin}
+
+\TestBox{\today}
+
+\TestBox{\MakeUppercase{lupus}}
+
+\TestBox{\MakeLowercase{LVPVS}}
+
+\hsize1pt
+
+\OMIT
+
+\begin{otherlanguage*}{italian}
+Il risorgimento per l'unità d'Italia.\TestPos{italian}\par
+\end{otherlanguage*}
+
+\end{document}

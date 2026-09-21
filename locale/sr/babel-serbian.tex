@@ -8,5 +8,12 @@
   \stop
 \fi
 \BabelBeforeIni{sr}{%
+  \BabelDefinitionFile{0}{serbian}{%
+    \PackageWarning{babel}{%
+      The name 'serbian' with the 'ldf' mechanism is\MessageBreak
+      currently assigned to the Latin script. For\MessageBreak
+      the Cyrillic script, use the name 'serbianc'.\MessageBreak
+      Reported}%
+    \def\BabelIniTag{sr-Latn}}%
 }
 \endinput

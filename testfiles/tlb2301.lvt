@@ -1,7 +1,7 @@
 % Test file for LaTeX2e/Babel bug report # 2301
 % tests that PostScript figure can be read when french is active
 % For French the ! is made active...
-\input{test2e}
+\input{test2e}\input{test2eb}
 \begin{filecontents}{test.ps}
 %!PS-Adobe-2.0
 %%BoundingBox: 0 0 100 100
@@ -10,12 +10,12 @@
 \START
 \FORMAT{LaTeX2e<1996/06/01}
 \CLASS{article}
-\PACKAGE[francais,english]{babel}
+\PACKAGE[french,english]{babel}
 \PACKAGE{epsfig}
 
 \OMIT
 \pdfoutput=0
-\usepackage[francais,english]{babel}
+\usepackage[french,english]{babel}
 \usepackage{epsfig}
 \nofiles
 \begin{document}

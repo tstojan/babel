@@ -1,28 +1,43 @@
 %$LuaLaTeX -*- coding: utf-8 ; mode: latex; TeX-engine: luatex; -*-
+\DocumentMetadata{language=ar, tagging=on}
 \documentclass[a4paper]{book}
 
-\usepackage[english, bidi=basic,
-            headfoot=arabic,  % an alternative is layout=sectioning
-            layout=counters.tabular]{babel}
+% ===================
 
-\babelprovide[import=ar, main]{arabic}
+\usepackage[arabic,
+            provide={
+              justification = kashida,
+              transforms = kashida.base digits.native},
+            bidi=basic,   
+            % headfoot=arabic,  % an alternative is layout=sectioning
+            layout= counters]{babel}
+
+% == Alternative without kashida ==
+
+% \usepackage[arabic,
+%             bidi=basic,
+%             headfoot=arabic,  % an alternative is layout=sectioning
+%             provide={ transforms = digits.native },
+%             layout=counters tabular]{babel}
+
+% =====================
 
 \babelfont{rm}
-          [ItalicFont=FreeSerif, Numbers=Arabic]
+          [ItalicFont=FreeSerif]
           {FreeSerif}
 \babelfont[english]{rm}{FreeSerif} % We need some italics
 
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{color}
-\usepackage[unicode]{hyperref}
+\usepackage[linkcolor=blue,urlcolor=blue,colorlinks=true]{hyperref}
 \usepackage{multicol}
 \usepackage{booktabs}
 
 \title{كهرباء}
-\author{From Wikipedia\\%
-        Typeset with \textsf{babel}
-        \addfontfeatures{Numbers=ArabicOff} \csname bbl@version\endcsname}
+\author{\foreignlanguage{english}{From Wikipedia}\\%
+        \foreignlanguage{english}{%  Remember it's a tabular
+          Typeset with \textsf{babel} \csname bbl@version\endcsname}}
 
 \begin{document}
 
@@ -189,16 +204,13 @@ Pseudodoxia Epidemica) الذي صدر عام 1646.
 
 \subsection{جدول التوزيع الإلكتروني}
 
-\foreignlanguage*{english}{Also from Wikipedia. These examples show
-the column order and some directions must be still sorted out. A
-minimal experimental \texttt{tabular} (3.17.1171) is
-used. Furthermore, the way “New Caledonia” is split looks wrong (but
-actually “correct”).}
+\foreignlanguage*{english}{Also from Wikipedia. The way “New Caledonia”
+is split looks wrong (but actually “correct”).}
 
 \begin{table}
 \centering
 \caption{جدول التوزيع الإلكتروني}
-\addfontfeatures{Numbers=ArabicOff}
+\disablelocaletransform{digits.native}
 \begin{tabular}{lllllllll}
 \toprule
 \multicolumn{1}{c}{الرقم} &  العنصر & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
